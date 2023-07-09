@@ -158,7 +158,7 @@ class MyGUI(QWidget):
         while self.is_transcribing:
             try:
                 now = datetime.utcnow()
-                pipe = pipeline(model="imvladikon/wav2vec2-xls-r-300m-hebrew", max_new_tokens=488)
+                pipe = pipeline(model="BenShermaister/whisper-base-he", max_new_tokens=488)
 
                 if not data_queue.empty():
                     phrase_complete = False
